@@ -27,7 +27,7 @@ spec:
       containers:
       - env:
         - name: DT_CUSTOM_PROP
-          value: version=0.1.0 revision=21 releasename=sockshop-staging-carts keptn_project=sockshop
+          value: version=0.1.0 revision=25 releasename=sockshop-staging-carts keptn_project=sockshop
             keptn_service=carts keptn_stage=staging keptn_deployment=primary
         - name: POD_NAME
           valueFrom:
@@ -47,8 +47,6 @@ spec:
               fieldPath: metadata.namespace
         - name: KEPTN_SERVICE
           value: carts
-        - name: UNLEASH_SERVER_URL
-          value: http://unleash.unleash-dev/api
         image: docker.io/keptnexamples/carts:0.11.1
         imagePullPolicy: IfNotPresent
         livenessProbe:
